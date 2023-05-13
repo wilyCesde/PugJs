@@ -1,0 +1,13 @@
+extends layout 
+
+block content
+    h2 Iniciando Sesión 
+    p(style='color:red;background-color:pink') #{errormessage}
+    form(method='post',action='/login') 
+        label Usuario 
+        input(class='form-control',name='username',type='text',placeholder='Usuario')
+        label Contraseña
+        input(class='form-control',name='password',type='password',placeholder='Contraseña')
+        br
+        input.btn.btn-dark(type='submit',value='Ingresar')
+
